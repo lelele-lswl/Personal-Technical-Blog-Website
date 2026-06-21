@@ -1,0 +1,80 @@
+export const DEFAULT_PROFILE = {
+  name: 'LeLeLe',
+  title: '全栈开发 / 编程爱好者',
+  bio: '热爱编程，专注于全栈开发。擅长前后端技术，追求代码的优雅与高效。喜欢探索新技术，将创意转化为现实。',
+  avatarUrl: '',
+  resumeUrl: '',
+  github: 'https://github.com/lelele-lswl',
+  email: '3054793058@qq.com',
+  linkedin: 'https://space.bilibili.com/493506164',
+  location: 'China',
+  motto: 'Code is poetry, build with passion.',
+}
+
+export const DEFAULT_SKILLS = [
+  { name: 'React', category: 'Frontend', level: 90, icon: 'SiReact' },
+  { name: 'Vue.js', category: 'Frontend', level: 85, icon: 'SiVuedotjs' },
+  { name: 'TypeScript', category: 'Frontend', level: 88, icon: 'SiTypescript' },
+  { name: 'JavaScript', category: 'Frontend', level: 95, icon: 'SiJavascript' },
+  { name: 'HTML/CSS', category: 'Frontend', level: 92, icon: 'SiHtml5' },
+  { name: 'Three.js', category: 'Frontend', level: 75, icon: 'SiThreedotjs' },
+  { name: 'TailwindCSS', category: 'Frontend', level: 88, icon: 'SiTailwindcss' },
+  { name: 'Spring Boot', category: 'Backend', level: 85, icon: 'SiSpringboot' },
+  { name: 'Java', category: 'Backend', level: 88, icon: 'SiOpenjdk' },
+  { name: 'Node.js', category: 'Backend', level: 82, icon: 'SiNodedotjs' },
+  { name: 'Python', category: 'Backend', level: 78, icon: 'SiPython' },
+  { name: 'MySQL', category: 'Backend', level: 80, icon: 'SiMysql' },
+  { name: 'Redis', category: 'Backend', level: 72, icon: 'SiRedis' },
+  { name: 'Docker', category: 'DevOps', level: 78, icon: 'SiDocker' },
+  { name: 'Git', category: 'DevOps', level: 90, icon: 'SiGit' },
+  { name: 'Linux', category: 'DevOps', level: 75, icon: 'SiLinux' },
+  { name: 'Nginx', category: 'DevOps', level: 70, icon: 'SiNginx' },
+  { name: 'AWS', category: 'DevOps', level: 65, icon: 'SiAmazon' },
+]
+
+export const DEFAULT_PROJECTS = [
+  {
+    title: 'SlaySeed',
+    description: '杀戮尖塔种子分享与查询平台，采用前后端分离架构，基于React构建响应式前端界面，Spring Boot提供RESTful API服务。实现种子数据的高效检索与分页、Redis缓存热点数据、MySQL持久化存储，支持高并发下的稳定访问。',
+    techStack: 'React, Spring Boot, OpenAI API, WebSocket, MySQL',
+    githubUrl: 'https://github.com',
+    previewUrl: 'https://example.com',
+    imageUrl: '',
+    sortOrder: 1,
+  },
+  {
+    title: 'Shool Take Out',
+    description: '全功能电商管理后台，包含数据可视化、订单管理、用户分析、库存追踪等模块。支持实时数据推送。',
+    techStack: 'Vue.js, Node.js, ECharts, MongoDB, Socket.io',
+    githubUrl: 'https://github.com',
+    previewUrl: 'https://example.com',
+    imageUrl: '',
+    sortOrder: 2,
+  },
+  {
+    title: '3D Portfolio Website',
+    description: '个人作品展示网站，使用Three.js打造沉浸式3D体验，包含粒子系统、模型交互、动态光影等效果。',
+    techStack: 'React, Three.js, Framer Motion, TailwindCSS',
+    githubUrl: 'https://github.com',
+    previewUrl: 'https://example.com',
+    imageUrl: '',
+    sortOrder: 3,
+  },
+  {
+    title: 'Book Node Manager',
+    description: '作为核心开发成员参与团队协作开发，负责后端架构设计与API接口实现。与前端、产品密切配合，通过敏捷开发流程高效推进项目迭代，在多人协作中积累了丰富的代码规范制定、Code Review及多人沟通经验',
+    techStack: 'Spring Cloud, Docker, Kubernetes, Redis, RabbitMQ',
+    githubUrl: 'https://github.com',
+    previewUrl: '',
+    imageUrl: '',
+    sortOrder: 4,
+  },
+]
+
+export const NAV_ITEMS = [
+  { label: '首页', href: '#hero' },
+  { label: '关于', href: '#about' },
+  { label: '技能', href: '#skills' },
+  { label: '项目', href: '#projects' },
+  { label: '联系', href: '#contact' },
+]
