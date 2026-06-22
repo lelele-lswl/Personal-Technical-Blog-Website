@@ -2,7 +2,7 @@ export const DEFAULT_PROFILE = {
   name: 'LeLeLe',
   title: '全栈开发 / 编程爱好者',
   bio: '热爱编程，专注于全栈开发。擅长前后端技术，追求代码的优雅与高效。喜欢探索新技术，将创意转化为现实。',
-  avatarUrl: '',
+  avatarUrl: '/picture/avatar.jpg',
   resumeUrl: '',
   github: 'https://github.com/lelele-lswl',
   email: '3054793058@qq.com',
@@ -39,7 +39,7 @@ export const DEFAULT_PROJECTS = [
     techStack: 'React, Spring Boot, OpenAI API, WebSocket, MySQL',
     githubUrl: 'https://github.com',
     previewUrl: 'https://example.com',
-    imageUrl: '',
+    imageUrl: '/picture/slayseed.png',
     sortOrder: 1,
   },
   {
@@ -48,7 +48,7 @@ export const DEFAULT_PROJECTS = [
     techStack: 'Vue.js, Node.js, ECharts, MongoDB, Socket.io',
     githubUrl: 'https://github.com',
     previewUrl: 'https://example.com',
-    imageUrl: '',
+    imageUrl: '/picture/take-out.png',
     sortOrder: 2,
   },
   {
@@ -57,7 +57,7 @@ export const DEFAULT_PROJECTS = [
     techStack: 'React, Three.js, Framer Motion, TailwindCSS',
     githubUrl: 'https://github.com',
     previewUrl: 'https://example.com',
-    imageUrl: '',
+    imageUrl: '/picture/3DPortfolioWebsite.png',
     sortOrder: 3,
   },
   {
@@ -66,7 +66,7 @@ export const DEFAULT_PROJECTS = [
     techStack: 'Spring Cloud, Docker, Kubernetes, Redis, RabbitMQ',
     githubUrl: 'https://github.com',
     previewUrl: '',
-    imageUrl: '',
+    imageUrl: '/picture/book.png',
     sortOrder: 4,
   },
 ]
