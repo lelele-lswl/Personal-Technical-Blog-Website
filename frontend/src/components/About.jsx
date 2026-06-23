@@ -1,3 +1,4 @@
+import { useState } from 'react'
 import { motion } from 'framer-motion'
 import { FiMapPin, FiMail, FiGithub, FiCode } from 'react-icons/fi'
 import { DEFAULT_PROFILE } from '../constants'
@@ -11,6 +12,7 @@ const stats = [
 
 export default function About() {
   const profile = DEFAULT_PROFILE
+  const [avatarError, setAvatarError] = useState(false)
 
   return (
     <section id="about" className="section-container">
@@ -38,7 +40,16 @@ export default function About() {
           <div className="relative w-72 h-72 mx-auto">
             <div className="absolute inset-0 rounded-full bg-gradient-to-br from-[#6c63ff] to-[#00d4ff] opacity-20 blur-2xl" />
             <div className="relative w-full h-full rounded-full border-2 border-[#6c63ff]/30 overflow-hidden bg-[#1a1a2e] flex items-center justify-center">
-              <FiCode size={80} className="text-[#6c63ff]/50" />
+              {avatarError ? (
+                <FiCode size={80} className="text-[#6c63ff]/50" />
+              ) : (
+                <img
+                  src={profile.avatarUrl}
+                  alt={profile.name}
+                  className="w-full h-full object-cover"
+                  onError={() => setAvatarError(true)}
+                />
+              )}
             </div>
             <motion.div
               className="absolute -top-4 -right-4 w-20 h-20 rounded-2xl bg-[#6c63ff]/10 border border-[#6c63ff]/20 flex items-center justify-center"

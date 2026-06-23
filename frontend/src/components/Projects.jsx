@@ -38,6 +38,7 @@ function getTechColor(tech) {
 export default function Projects() {
   const [projects] = useState(DEFAULT_PROJECTS)
   const [hoveredId, setHoveredId] = useState(null)
+  const [imgErrors, setImgErrors] = useState({})
 
   return (
     <section id="projects" className="section-container">
@@ -67,15 +68,24 @@ export default function Projects() {
             onMouseLeave={() => setHoveredId(null)}
           >
             <div className="relative h-48 bg-gradient-to-br from-[#1a1a2e] to-[#12121a] overflow-hidden flex items-center justify-center">
-              <motion.div
-                animate={{
-                  rotate: hoveredId === index ? 360 : 0,
-                  scale: hoveredId === index ? 1.2 : 1,
-                }}
-                transition={{ duration: 8, ease: 'linear' }}
-              >
-                <FiFolder size={60} className="text-[#6c63ff]/20" />
-              </motion.div>
+              {imgErrors[index] ? (
+                <motion.div
+                  animate={{
+                    rotate: hoveredId === index ? 360 : 0,
+                    scale: hoveredId === index ? 1.2 : 1,
+                  }}
+                  transition={{ duration: 8, ease: 'linear' }}
+                >
+                  <FiFolder size={60} className="text-[#6c63ff]/20" />
+                </motion.div>
+              ) : (
+                <img
+                  src={project.imageUrl}
+                  alt={project.title}
+                  className="w-full h-full object-cover"
+                  onError={() => setImgErrors((prev) => ({ ...prev, [index]: true }))}
+                />
+              )}
 
               <div className="absolute inset-0 bg-gradient-to-t from-[#0a0a0f] via-transparent to-transparent" />
 
