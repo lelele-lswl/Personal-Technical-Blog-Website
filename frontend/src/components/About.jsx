@@ -4,7 +4,7 @@ import { FiMapPin, FiMail, FiGithub, FiCode } from 'react-icons/fi'
 import { DEFAULT_PROFILE } from '../constants'
 
 const stats = [
-  { label: '年经验', value: '1' },
+  { label: '年经验', value: '1+' },
   { label: '项目完成', value: '10+' },
   { label: '技术栈', value: '20+' },
   { label: '开源贡献', value: '5+' },
@@ -89,9 +89,41 @@ export default function About() {
             </div>
             <div className="flex items-center gap-3 text-[#888]">
               <FiGithub className="text-[#6c63ff]" />
-              <span>{profile.github}</span>
+              <a href={profile.github} target="_blank" rel="noopener noreferrer" className="hover:text-[#6c63ff] transition-colors">{profile.github}</a>
             </div>
+            {profile.education && (
+              <div className="flex items-center gap-3 text-[#888]">
+                <span className="text-[#6c63ff]">🎓</span>
+                <span>{profile.education}</span>
+              </div>
+            )}
+            {profile.experience && (
+              <div className="flex items-center gap-3 text-[#888]">
+                <span className="text-[#6c63ff]">💼</span>
+                <span>{profile.experience}</span>
+              </div>
+            )}
           </div>
+
+          {profile.interests && (
+            <div className="mb-8">
+              <h4 className="text-white font-semibold mb-3">🎯 兴趣方向</h4>
+              <div className="flex flex-wrap gap-2">
+                {profile.interests.map((interest, index) => (
+                  <motion.span
+                    key={interest}
+                    initial={{ opacity: 0, scale: 0.8 }}
+                    whileInView={{ opacity: 1, scale: 1 }}
+                    viewport={{ once: true }}
+                    transition={{ duration: 0.3, delay: index * 0.1 }}
+                    className="px-4 py-2 rounded-full bg-[#6c63ff]/10 border border-[#6c63ff]/20 text-sm text-[#00d4ff] hover:bg-[#6c63ff]/20 hover:border-[#6c63ff]/40 transition-all cursor-default"
+                  >
+                    {interest}
+                  </motion.span>
+                ))}
+              </div>
+            </div>
+          )}
 
           <div className="grid grid-cols-4 gap-4">
             {stats.map((stat, i) => (

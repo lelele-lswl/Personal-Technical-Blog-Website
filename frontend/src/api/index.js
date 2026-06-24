@@ -2,7 +2,7 @@ import axios from 'axios'
 
 const api = axios.create({
   baseURL: '/api',
-  timeout: 10000,
+  timeout: 30000,
   headers: {
     'Content-Type': 'application/json',
   },
@@ -15,6 +15,10 @@ api.interceptors.response.use(
     return Promise.reject(error)
   }
 )
+
+export const aiApi = {
+  chat: (message) => api.post('/ai/chat', { message }),
+}
 
 export const profileApi = {
   get: () => api.get('/profile'),

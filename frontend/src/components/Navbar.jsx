@@ -42,7 +42,7 @@ export default function Navbar() {
           className="text-2xl font-bold gradient-text"
           whileHover={{ scale: 1.05 }}
         >
-          {'<Dev />'}
+          {"LeLeLe's blog"}
         </motion.a>
 
         <div className="hidden md:flex items-center gap-1">
